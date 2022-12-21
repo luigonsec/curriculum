@@ -1,0 +1,17 @@
+<div class="grid">
+  <div class="col-12">
+    <h3>Education</h3>
+    <div class='Study' *ngFor="let study of this.info">
+      <div class="StudyItem Title">
+        <i class="Icon fas fa-award"></i> {{study.name}}
+      </div>
+      <div class="StudyItem Date">
+        <i class="Icon fas fa-calendar"></i> {{study.start}} / {{study.end ? study.end : '-'}}
+      </div>
+      <div class="StudyItem Location">
+        <i class="Icon fas fa-location-arrow"></i> {{study.location}}
+      </div>
+    </div>
+  </div>
+
+</div>

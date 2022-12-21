@@ -1,0 +1,16 @@
+<div class="grid">
+  <div class="col-12">
+    <h3>Personal Information</h3>
+    <div class="PersonalItem" *ngFor="let item of this.info">
+      <div [class]="'Icon ' + item.icon.class">
+        <i [class]="item.icon.value"></i>
+      </div>
+      <div class="Label">
+        {{item.label}}
+      </div>
+      <div class="Value">
+        {{item.value}}
+      </div>
+    </div>
+  </div>
+</div>

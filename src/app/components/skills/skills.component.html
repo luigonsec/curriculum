@@ -1,0 +1,25 @@
+<div class="grid">
+  <div class="col-12">
+    <h3>Skills</h3>
+
+    <div *ngFor="let skill of this.skills">
+      <h4>{{skill.category}}</h4>
+
+      <div *ngFor="let item of skill.values">
+        <div class="grid">
+          <div class="col-4">
+            {{item.name}}
+          </div>
+          <div class="col-8">
+            <p-rating [iconOnStyle]="{color: '#21889c'}" [ngModel]="item.value" [readonly]="true" [stars]="5"
+              [cancel]="false">
+            </p-rating>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
