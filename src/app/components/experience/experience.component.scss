@@ -5,6 +5,18 @@
   }
 
   .Description {
-    margin-top: 5px;
+    text-align: justify;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .Tasks {
+    margin-top: 15px;
+    .Title {
+      font-weight: bold;
+    }
+    .Task {
+      margin-top: 10px;
+    }
   }
 }

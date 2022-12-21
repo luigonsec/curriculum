@@ -1,11 +1,14 @@
 const data = {
+  name: 'Luis González Seco',
+  position: 'Fullstack developer',
+
+  introduction: [
+    "Hi, I'm Luis, a 31 year old Spanish guy. I consider myself a problem solver, who enjoys solving problems. In every chess position, there is always a move that is objectively the best, my passion is to find it. I also apply this way of thinking when developing software or solving problems in the world of technology.",
+    'I am a person committed to his work, his profession and his company. In that aspect I consider myself as a hooligan. I am loyal to my company and my work if I feel valued and that I am taken into account within the team. I treat people and companies as they treat me.',
+    'I am currently very much in love with front end technologies, as they allow me to unleash and show my creativity, while performing a methodical and complex task. You could say that it encompasses many of my passions (art, problem solving, programming,...) in a single task. ',
+  ],
+
   personal: [
-    {
-      id: 1,
-      icon: { value: 'fas fa-signature', class: 'signature' },
-      label: 'Name',
-      value: 'Luis González Seco',
-    },
     {
       id: 2,
       icon: { value: 'fas fa-birthday-cake', class: 'cake' },
@@ -91,10 +94,13 @@ const data = {
 
       location: 'Seville, Spain',
       vertical: 'Energy',
-      description: [
-        'Development and maintenance of a tool for energy monitoring and analysis.',
-        'Development of control systems for optimization of air conditioning and lighting consumption.',
-        'Development of scripts for debugging data in databases',
+      description:
+        'During my years at Siemens I have contributed to the development and maintenance of the EEA (Energy Efficiency Analytics) service. The service consists of a monitoring tool, an automatic reporting system, and other complementary software such as the automatic control system for luminaires and air conditioners. I have led the development of all the software offered by the service, as well as I have contributed to identify possible improvements of the service especially regarding new functionalities of the tools. ',
+      tasks: [
+        'Development and maintenance of websites in different technologies as JQuery or React.',
+        'Development of control systems by using the Modbus protocol, MQTT and others.',
+        'Development of scripts for debugging data in Cassandra or Redis databases',
+        'Train new colleagues to quickly become involved in the development of the tool and to learn about the service.',
       ],
     },
     {
@@ -104,7 +110,8 @@ const data = {
       end: '2015',
       location: 'Seville, Spain',
       vertical: 'Geographical',
-      description: [
+      description: '',
+      tasks: [
         'Development and maintenance of the National Atlas of Spain Information System.',
       ],
     },
@@ -115,7 +122,8 @@ const data = {
       end: '2015',
       location: 'Seville, Spain',
       vertical: 'Digital Marketing',
-      description: [
+      description: '',
+      tasks: [
         'Development of a web CMS for smart labeling of local natural products',
       ],
     },

@@ -1,24 +1,29 @@
-<div id="Curriculum">
+<div class="Buttons">
+  <button pButton class="p-button-primary p-button-sm" (click)="downloadAsPDF()">Export To PDF</button>
+</div>
+
+<div #curriculum id="Curriculum">
   <div id='Header' class="grid">
     <div class="col-2">
       <img class="Profile" src="assets/images/profile.jpeg" alt="">
     </div>
     <div class="col-10">
-      <h1>Luis González Seco</h1>
-      <h2>Full Stack Developer</h2>
+      <h1>{{this.name}}</h1>
+      <h2>{{this.position}}</h2>
     </div>
   </div>
   <div class="grid">
     <div class="col-12">
-      <div class="grid">
-        <div class="col-6">
-          <app-personal-data></app-personal-data>
-        </div>
-        <div class="col-6">
-          <app-studies></app-studies>
-        </div>
-      </div>
+      <app-introduction></app-introduction>
     </div>
+
+    <div class="col-6">
+      <app-personal-data></app-personal-data>
+    </div>
+    <div class="col-6">
+      <app-studies></app-studies>
+    </div>
+
   </div>
   <div class="grid">
     <div class="col-12">

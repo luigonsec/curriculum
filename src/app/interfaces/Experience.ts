@@ -5,5 +5,6 @@ export default interface Experience {
   location: string;
   vertical: string;
   position: string;
-  description: string[];
+  description: string;
+  tasks: string[];
 }

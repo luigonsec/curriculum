@@ -8,8 +8,17 @@
       <div class="Position">
         {{experience.position}}
       </div>
-      <div class="Description" *ngFor="let description of experience.description">
-        {{description}}
+      <div class="Description">
+        {{experience.description}}
+      </div>
+      <div class="Tasks">
+        <div class="Title">
+          Main tasks
+        </div>
+        <div class="Task" *ngFor="let task of experience.tasks">
+          {{task}}
+        </div>
+
       </div>
     </div>
   </div>
