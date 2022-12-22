@@ -10,6 +10,7 @@ import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { IntroductionComponent } from './introduction/introduction.component';
+import { ChipModule } from 'primeng/chip';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,6 @@ import { IntroductionComponent } from './introduction/introduction.component';
     IntroductionComponent,
   ],
   exports: [CurriculumComponent, SkillsComponent],
-  imports: [CommonModule, ButtonModule, RatingModule, FormsModule],
+  imports: [CommonModule, ButtonModule, RatingModule, FormsModule, ChipModule],
 })
 export class ComponentsModule {}

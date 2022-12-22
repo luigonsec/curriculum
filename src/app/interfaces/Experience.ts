@@ -7,4 +7,10 @@ export default interface Experience {
   position: string;
   description: string;
   tasks: string[];
+  stack: Technology[];
+}
+
+interface Technology {
+  name: string;
+  image: string;
 }

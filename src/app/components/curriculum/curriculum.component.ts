@@ -20,7 +20,15 @@ export class CurriculumComponent implements OnInit {
       html2canvas(this.curriculum.nativeElement).then((canvas) => {
         const img = canvas.toDataURL('image/png');
         const doc = new jsPDF('p', 'mm', 'a4');
-        doc.addImage(img, 'JPEG', 0, 0, 210, 297);
+
+        const height =
+          (document.getElementById('Curriculum') || {}).offsetHeight || 0;
+        const width =
+          (document.getElementById('Curriculum') || {}).offsetWidth || 0;
+
+        const newWidth = (297 / height) * width;
+
+        doc.addImage(img, 'JPEG', (210 - newWidth) / 2, 0, newWidth, 297);
         doc.save(`${this.name.toLowerCase().split(' ').join('_')}.pdf`);
       });
     }

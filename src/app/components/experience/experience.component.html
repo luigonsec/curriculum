@@ -19,6 +19,14 @@
           {{task}}
         </div>
 
+        <div class="Stack">
+
+          <p-chip class="Chip" [label]="tag.name" [image]="'assets/images/stack/' + tag.image "
+            *ngFor="let tag of experience.stack"></p-chip>
+
+
+        </div>
+
       </div>
     </div>
   </div>
