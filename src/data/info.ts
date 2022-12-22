@@ -37,7 +37,13 @@ const data = {
       id: 6,
       icon: { value: 'fab fa-github', class: 'github' },
       label: 'Github',
-      value: 'http://github.com/luigonsec',
+      value: 'https://github.com/luigonsec',
+    },
+    {
+      id: 7,
+      icon: { value: 'fab fa-stack-overflow', class: 'stackoverflow' },
+      label: 'Stack Overflow',
+      value: 'https://stackoverflow.com/users/3750462/luis-gonzález',
     },
   ],
 
