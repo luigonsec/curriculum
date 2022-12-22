@@ -95,9 +95,10 @@ const data = {
       location: 'Seville, Spain',
       vertical: 'Energy',
       description:
-        'During my years at Siemens I have contributed to the development and maintenance of the EEA (Energy Efficiency Analytics) service. The service consists of a monitoring tool, an automatic reporting system, and other complementary software such as the automatic control system for luminaires and air conditioners. I have led the development of all the software offered by the service, as well as I have contributed to identify possible improvements of the service especially regarding new functionalities of the tools. ',
+        'During my years at Siemens I have contributed to the development and maintenance of the EEA (Energy Efficiency Analytics) service. The service consists of a monitoring tool, an automatic reporting system, and other complementary software such as the automatic control system for lighting and air conditioners. I have led the development of all the software offered by the service, as well as I have contributed to identify possible improvements of the service especially regarding new functionalities of the tools. ',
       tasks: [
         'Development and maintenance of websites in different technologies as JQuery or React.',
+        'Development and maintenance of automatic reporting system built with Python.',
         'Development of control systems by using the Modbus protocol, MQTT and others.',
         'Development of scripts for debugging data in Cassandra or Redis databases',
         'Train new colleagues to quickly become involved in the development of the tool and to learn about the service.',
