@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { ChipModule } from 'primeng/chip';
+import { LanguagesComponent } from './languages/languages.component';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,16 @@ import { ChipModule } from 'primeng/chip';
     SkillsComponent,
     AboutMeComponent,
     IntroductionComponent,
+    LanguagesComponent,
   ],
   exports: [CurriculumComponent, SkillsComponent],
-  imports: [CommonModule, ButtonModule, RatingModule, FormsModule, ChipModule],
+  imports: [
+    CommonModule,
+    ButtonModule,
+    RatingModule,
+    FormsModule,
+    ChipModule,
+    TableModule,
+  ],
 })
 export class ComponentsModule {}

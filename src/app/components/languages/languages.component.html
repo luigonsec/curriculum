@@ -1,0 +1,23 @@
+<div class="grid">
+  <div class="col-12">
+    <h3>Languages</h3>
+
+    <p-table [value]="this.languages">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Language</th>
+          <th>Level</th>
+
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-language>
+        <tr>
+          <td>{{language.name}}</td>
+          <td>{{language.level}}</td>
+
+        </tr>
+      </ng-template>
+    </p-table>
+
+  </div>
+</div>

@@ -8,6 +8,11 @@ const data = {
     'I am currently very much in love with front end technologies, as they allow me to unleash and show my creativity, while performing a methodical and complex task. You could say that it encompasses many of my passions (art, problem solving, programming,...) in a single task. ',
   ],
 
+  languages: [
+    { name: 'Spanish', level: 'Native' },
+    { name: 'English', level: 'Intermediate' },
+  ],
+
   personal: [
     {
       id: 2,
