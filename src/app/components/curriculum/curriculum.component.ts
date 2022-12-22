@@ -17,7 +17,13 @@ export class CurriculumComponent implements OnInit {
 
   public downloadAsPDF() {
     if (this.curriculum) {
-      html2canvas(this.curriculum.nativeElement).then((canvas) => {
+      html2canvas(this.curriculum.nativeElement, {
+        allowTaint: false,
+        ignoreElements: (elem: Element) => {
+          return false;
+        },
+        useCORS: true,
+      }).then((canvas) => {
         const img = canvas.toDataURL('image/png');
         const doc = new jsPDF('p', 'mm', 'a4');
 

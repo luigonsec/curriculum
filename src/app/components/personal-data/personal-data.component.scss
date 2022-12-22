@@ -9,11 +9,20 @@
 
   .Icon {
     min-width: 30px;
-    margin-right: 10px;
+
+    font-size: 14px;
   }
   .Label {
+    font-size: 14px;
     margin-right: 5px;
     font-weight: bold;
     color: $secondary;
+  }
+
+  .Value {
+    font-size: 14px;
+    a {
+      color: black;
+    }
   }
 }

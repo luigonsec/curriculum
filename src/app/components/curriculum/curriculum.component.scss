@@ -1,5 +1,14 @@
 @import "src/assets/scss/colors.scss";
 
+.Buttons {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .Export {
+    cursor: pointer;
+    color: #7e6e35;
+  }
+}
+
 #Curriculum {
   padding: 25px;
   margin-top: 15px;
@@ -11,10 +20,15 @@
   #Header {
     background-color: $backgroundDark;
     border-radius: 100px 0px 0px 100px;
+
+    h2 {
+      color: #7e6e35;
+    }
   }
 
   .Profile {
     width: 100%;
+    max-width: 110px;
     border-radius: 100%;
     border: 3px solid $secondary;
   }

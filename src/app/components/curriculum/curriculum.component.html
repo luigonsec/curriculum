@@ -1,38 +1,41 @@
 <div class="Buttons">
-  <button pButton class="p-button-primary p-button-sm" (click)="downloadAsPDF()">Export To PDF</button>
+  <label class="Export" for="" (click)="downloadAsPDF()">
+    Export to PDF
+  </label>
 </div>
 
 <div #curriculum id="Curriculum">
   <div id='Header' class="grid">
-    <div class="col-2">
+    <div class="col-3 md:col-2">
       <img class="Profile" src="assets/images/profile.jpeg" alt="">
     </div>
-    <div class="col-10">
+    <div class="col-9 md:col-10">
       <h1>{{this.name}}</h1>
       <h2>{{this.position}}</h2>
     </div>
   </div>
   <div class="grid">
-    <div class="col-12">
+    <div class="col-12 md:col-12">
       <app-introduction></app-introduction>
     </div>
-
-    <div class="col-6">
-      <app-personal-data></app-personal-data>
-      <app-experience></app-experience>
-
-    </div>
-    <div class="col-6">
-      <app-studies></app-studies>
+    <div class="col-12 md:col-12">
       <div class="grid">
-        <div class="col-8 col-offset-4">
-
-          <app-skills></app-skills>
-          <app-about-me></app-about-me>
+        <div class="col-12 md:col-6">
+          <app-personal-data></app-personal-data>
         </div>
-
+        <div class="col-12 md:col-6">
+          <app-studies></app-studies>
+        </div>
       </div>
     </div>
 
+    <div class="col-12 md:col-8">
+      <app-experience></app-experience>
+    </div>
+
+    <div class="col-12 md:col-3 col-12 md:col-offset-1">
+      <app-skills></app-skills>
+      <app-about-me></app-about-me>
+    </div>
   </div>
 </div>

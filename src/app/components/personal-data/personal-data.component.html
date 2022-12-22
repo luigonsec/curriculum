@@ -8,8 +8,14 @@
       <div class="Label">
         {{item.label}}
       </div>
+
       <div class="Value">
-        {{item.value}}
+        <a *ngIf="item.isLink" [href]="item.value" target="_blank">
+          {{item.value}}
+        </a>
+        <span *ngIf="!!!item.isLink">
+          {{item.value}}
+        </span>
       </div>
     </div>
   </div>

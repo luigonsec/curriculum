@@ -20,13 +20,15 @@
         </div>
 
         <div class="Stack">
-
-          <p-chip class="Chip" [label]="tag.name" [image]="'assets/images/stack/' + tag.image "
-            *ngFor="let tag of experience.stack"></p-chip>
-
-
+          <div class="Chip" *ngFor="let tag of experience.stack">
+            <div class="ImageWrapper">
+              <img class="Image" [src]="'assets/images/stack/' + tag.image " alt="">
+            </div>
+            <span class="Name">
+              {{tag.name}}
+            </span>
+          </div>
         </div>
-
       </div>
     </div>
   </div>

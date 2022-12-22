@@ -5,4 +5,5 @@ export default interface PersonalDataItem {
   value: string;
   icon: ItemIcon;
   id: number;
+  isLink: boolean;
 }
