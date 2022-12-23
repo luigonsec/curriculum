@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import Experience from 'src/app/interfaces/Experience';
 import info from 'src/data/info';
 
@@ -10,9 +11,13 @@ import info from 'src/data/info';
 export class ExperienceComponent implements OnInit {
   public experiences: Experience[] = [];
 
-  constructor() {}
+  @Input('lang') lang: string = this.translate.currentLang;
+  constructor(private translate: TranslateService) {}
 
+  ngOnChanges(changes: SimpleChanges): void {
+    this.ngOnInit();
+  }
   ngOnInit(): void {
-    this.experiences = info.experience;
+    this.experiences = info[this.lang].experience;
   }
 }

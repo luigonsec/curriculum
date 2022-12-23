@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import PersonalDataItem from 'src/app/interfaces/PersonalDataItem';
 import info from 'src/data/info';
 
@@ -8,10 +9,15 @@ import info from 'src/data/info';
   styleUrls: ['./personal-data.component.scss'],
 })
 export class PersonalDataComponent implements OnInit {
-  public info: PersonalDataItem[] = [];
-  constructor() {}
+  public personal: PersonalDataItem[] = [];
 
+  @Input('lang') lang: string = this.translate.currentLang;
+  constructor(private translate: TranslateService) {}
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.ngOnInit();
+  }
   ngOnInit(): void {
-    this.info = info.personal;
+    this.personal = info[this.lang].personal;
   }
 }

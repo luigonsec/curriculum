@@ -13,6 +13,11 @@ import { IntroductionComponent } from './introduction/introduction.component';
 import { ChipModule } from 'primeng/chip';
 import { LanguagesComponent } from './languages/languages.component';
 import { TableModule } from 'primeng/table';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { I18nConfig } from 'src/i18n-config';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ExporterComponent } from './exporter/exporter.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +29,7 @@ import { TableModule } from 'primeng/table';
     AboutMeComponent,
     IntroductionComponent,
     LanguagesComponent,
+    ExporterComponent,
   ],
   exports: [CurriculumComponent, SkillsComponent],
   imports: [
@@ -32,7 +38,20 @@ import { TableModule } from 'primeng/table';
     RatingModule,
     FormsModule,
     ChipModule,
+    HttpClientModule,
     TableModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
+  providers: [I18nConfig],
 })
 export class ComponentsModule {}
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}

@@ -2,7 +2,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
 
-import data from 'src/data/info';
+import info from 'src/data/info';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-curriculum',
@@ -11,9 +12,12 @@ import data from 'src/data/info';
 })
 export class CurriculumComponent implements OnInit {
   @ViewChild('curriculum', { static: true }) curriculum?: ElementRef;
+
+  public lang: string = '';
   public name: string = '';
   public position: string = '';
-  constructor() {}
+
+  constructor(private translate: TranslateService) {}
 
   public downloadAsPDF() {
     if (this.curriculum) {
@@ -40,8 +44,18 @@ export class CurriculumComponent implements OnInit {
     }
   }
 
+  setLanguage(language: string) {
+    this.translate.use(language);
+  }
+
   ngOnInit(): void {
-    this.name = data.name;
-    this.position = data.position;
+    this.translate.onLangChange.subscribe((event) => {
+      this.lang = event.lang;
+      this.name = info[this.lang].name;
+      this.position = info[this.lang].position;
+    });
+    this.lang = this.translate.currentLang;
+    this.name = info[this.lang].name;
+    this.position = info[this.lang].position;
   }
 }

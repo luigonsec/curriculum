@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import Study from 'src/app/interfaces/Study';
 
 import info from 'src/data/info';
@@ -9,10 +10,15 @@ import info from 'src/data/info';
   styleUrls: ['./studies.component.scss'],
 })
 export class StudiesComponent implements OnInit {
-  public info: Study[] = [];
-  constructor() {}
+  public studies: Study[] = [];
 
+  @Input('lang') lang: string = this.translate.currentLang;
+  constructor(private translate: TranslateService) {}
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.ngOnInit();
+  }
   ngOnInit(): void {
-    this.info = info.studies;
+    this.studies = info[this.lang].studies;
   }
 }

@@ -3,9 +3,17 @@
 .Buttons {
   padding-top: 20px;
   padding-bottom: 20px;
-  .Export {
-    cursor: pointer;
-    color: #7e6e35;
+  .Actions {
+  }
+
+  .Languages {
+    text-align: right;
+    .Language {
+      cursor: pointer;
+      color: #7e6e35;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
   }
 }
 

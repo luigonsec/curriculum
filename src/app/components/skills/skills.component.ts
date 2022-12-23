@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import Skill from 'src/app/interfaces/Skill';
 import info from 'src/data/info';
 
@@ -9,9 +10,13 @@ import info from 'src/data/info';
 })
 export class SkillsComponent implements OnInit {
   skills: Skill[] = [];
-  constructor() {}
+  @Input('lang') lang: string = this.translate.currentLang;
+  constructor(private translate: TranslateService) {}
 
+  ngOnChanges(changes: SimpleChanges): void {
+    this.ngOnInit();
+  }
   ngOnInit(): void {
-    this.skills = info.skills;
+    this.skills = info[this.lang].skills;
   }
 }

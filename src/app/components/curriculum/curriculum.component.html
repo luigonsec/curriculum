@@ -1,8 +1,19 @@
-<div class="Buttons">
-  <label class="Export" for="" (click)="downloadAsPDF()">
-    Export to PDF
-  </label>
+<div class="Buttons grid">
+  <div class="col-6">
+    <div class="Actions">
+      <app-exporter [lang]="this.lang"></app-exporter>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="Languages">
+      <label class="Language" (click)="setLanguage('es')" for="">Español</label>|<label class="Language"
+        (click)="setLanguage('en')" for="">English</label>
+    </div>
+  </div>
 </div>
+
+
+
 
 <div #curriculum id="Curriculum">
   <div id='Header' class="grid">
@@ -16,24 +27,24 @@
   </div>
   <div class="grid">
     <div class="col-12 md:col-12">
-      <app-introduction></app-introduction>
+      <app-introduction [lang]="this.lang"></app-introduction>
     </div>
     <div class="col-12 md:col-12">
       <div class="grid">
         <div class="col-12 md:col-6">
-          <app-personal-data></app-personal-data>
+          <app-personal-data [lang]="this.lang"></app-personal-data>
         </div>
         <div class="col-12 md:col-6">
-          <app-studies></app-studies>
+          <app-studies [lang]="this.lang"></app-studies>
         </div>
         <div class="col-12 md:col-8">
-          <app-experience></app-experience>
+          <app-experience [lang]="this.lang"></app-experience>
         </div>
 
         <div class="col-12 md:col-3 col-12 md:col-offset-1">
-          <app-skills></app-skills>
-          <app-languages></app-languages>
-          <app-about-me></app-about-me>
+          <app-skills [lang]="this.lang"></app-skills>
+          <app-languages [lang]="this.lang"></app-languages>
+          <app-about-me [lang]="this.lang"></app-about-me>
         </div>
       </div>
     </div>
